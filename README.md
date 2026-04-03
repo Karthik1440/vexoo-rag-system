@@ -50,3 +50,5 @@ python gsm8k_training/train.py
 python gsm8k_training/evaluate.py
 
 streamlit run app.py
+
+streamlit live: https://vexoo-rag-system.streamlit.app/
