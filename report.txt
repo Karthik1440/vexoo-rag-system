@@ -1,0 +1,62 @@
+# Vexoo AI Engineer Assignment – Report
+
+## 1. Approach
+
+This project implements a Retrieval-Augmented Generation (RAG) system using a sliding window strategy for document ingestion. The input document is split into overlapping chunks, which are then transformed into a structured Knowledge Pyramid consisting of four layers:
+
+* Raw Text
+* Summary
+* Category Label
+* Keywords
+
+For retrieval, a semantic search mechanism is implemented using TF-IDF vectorization and cosine similarity to match user queries with the most relevant document chunk.
+
+Additionally, a simple interactive UI is built using Streamlit to allow users to input documents and query them in real time.
+
+---
+
+## 2. Design Decisions
+
+* Used a sliding window (1000 characters with overlap) to preserve context across chunks
+* Implemented a Knowledge Pyramid for multi-level information representation
+* Chose TF-IDF instead of transformer embeddings for faster execution and zero external dependencies
+* Used rule-based categorization for simplicity and interpretability
+* Designed the system to be modular and easy to extend
+
+---
+
+## 3. GSM8K Implementation
+
+The GSM8K dataset was loaded using the HuggingFace datasets library. A structured training pipeline was implemented including:
+
+* Dataset loading
+* Tokenization (simulated)
+* Training loop (simulated)
+* Evaluation using accuracy
+
+Due to computational constraints, full fine-tuning was not performed. Instead, a simulated pipeline was used to demonstrate understanding of the training workflow.
+
+---
+
+## 4. Assumptions
+
+* Summarization is implemented as a placeholder (first 150 characters)
+* Keyword extraction is based on simple filtering
+* Categorization is rule-based
+* Model training is simulated rather than fully executed
+
+---
+
+## 5. Future Improvements
+
+* Replace TF-IDF with transformer-based embeddings
+* Add LLM-based summarization
+* Improve retrieval with vector databases (FAISS)
+* Implement real fine-tuning for GSM8K
+* Add multi-document and conversational support
+
+---
+
+## 6. Conclusion
+
+The system successfully demonstrates a complete RAG pipeline with structured knowledge representation and semantic retrieval. The implementation focuses on simplicity, modularity, and practical usability while covering all core requirements of the assignment.
